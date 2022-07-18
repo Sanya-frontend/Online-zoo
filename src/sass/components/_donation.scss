@@ -1,0 +1,95 @@
+.donation {
+    background-color: $color-additional;
+    color: $color-light;
+    padding: 20px 0 40px 0;
+}
+
+.donation__container {
+    min-height: 221px;
+    @include flex();
+}
+
+.donation__content {
+    max-width: 920px;
+    padding-right: 30px;
+
+    @include media-laptop {
+        padding-right: 0;
+    }
+}
+
+.donation__title {
+    padding-top: 30px;
+    @include font($size: 4.2rem, $height: 5.1rem, $weight: 500);
+    font-size: calc((100vw - 480px) / (1920 - 480) * (42 - 22) + 22px);
+    color: $color-light;
+}
+
+.donation__text {
+    max-width: 630px;
+}
+
+.donation-form__input-wrapper {
+    display: flex;
+    align-items: center;
+    min-width: 320px;
+    height: 74px; 
+    border: 1px solid $color-light;
+    border-radius: 5px;
+    padding-left: 14px;
+
+    @include media-laptop {
+        min-width: 260px;
+        height: 60px;
+
+        button {
+            width: 80px;
+        }
+    }
+}
+
+.donation-form__input-wrapper::before {
+    content: '$';
+    color: $color-light;
+    padding-right: 4px;
+  }
+
+.donation__input {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    outline: none;
+    border: 0;
+    color: $color-light;
+    
+    &::placeholder {
+        @include font($size: 1.8rem, $height: 2.2rem, $weight: 600);
+        font-family: $font-family;
+        text-transform: uppercase;
+        color: $color-light;
+
+        @include media-laptop {
+            font-size: 1.4rem;
+        }
+    }
+
+    &:focus::placeholder {
+        opacity: 0;
+         transition: opacity 0.4s ease;   
+    }
+}
+
+
+
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

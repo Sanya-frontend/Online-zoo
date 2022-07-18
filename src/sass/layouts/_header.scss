@@ -1,0 +1,15 @@
+.header {
+    background-color: $color-primary;
+}
+
+.header__container {
+    padding-top: 28px;
+    padding-bottom: 23px;
+    @include flex();
+    row-gap: 20px;
+}
+
+.header__wrapper-navigation {
+    @include flex();
+    column-gap: 70px;
+}
